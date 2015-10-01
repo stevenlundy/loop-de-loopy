@@ -1,15 +1,15 @@
 var canvas = document.getElementById('canvas');
 var c = canvas.getContext('2d');
 
-canvas.width = 800;
-canvas.height = 800;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 var startPoint = {
-  x: 600,
-  y: 200
+  x: window.innerWidth/2,
+  y: window.innerHeight/2
 };
 
-var unit = 40;
+var unit = Math.floor(Math.min(window.innerWidth, window.innerHeight)/15);
 
 var rotateCW = function(direction){
   if(direction.y){
